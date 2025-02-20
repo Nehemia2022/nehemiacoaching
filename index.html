@@ -44,8 +44,8 @@
 
         /* Alerte de prix promotionnel et compte à rebours */
         .blinking-text {
-            color: #26db0e;  /* Bleu pour le prix promotionnel */
-            font-size: 1.3em;  /* Réduit la taille du texte du prix */
+            color: #26db0e;  
+            font-size: 1.3em;  
             font-weight: bold;
             animation: blink 1s infinite;
             text-align: center;
@@ -61,11 +61,11 @@
         /* Fixer le prix promotionnel et le compte à rebours en bas */
         .sticky-alerts {
             position: fixed;
-            bottom: 0; /* Fixe au bas de la page */
+            bottom: 0; 
             left: 0;
             right: 0;
             background-color: rgb(234, 244, 248);
-            padding: 8px 0; /* Réduit l'espacement */
+            padding: 8px 0;
             z-index: 1000;
             text-align: center;
             box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
@@ -73,9 +73,9 @@
         }
 
         .countdown {
-            font-size: 1.4em; /* Réduit la taille du compte à rebours */
+            font-size: 1.4em;
             font-weight: bold;
-            color: #e74c3c;  /* Rouge pour le compte à rebours */
+            color: #e74c3c;
             margin-top: 10px;
         }
 
@@ -190,7 +190,7 @@
             text-decoration: none;
             transition: background-color 0.3s ease;
             position: fixed;
-            bottom: 80px; /* Ajuste pour laisser de l'espace au prix et compte à rebours */
+            bottom: 80px;
             right: 20px;
             z-index: 1000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -201,6 +201,45 @@
         .cta-button:active {
             background-color: #075E54;
         }
+
+        /* Media Queries pour rendre le site responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .skills-list {
+                grid-template-columns: 1fr; /* Affichage en une colonne sur mobile */
+            }
+            .images-gallery {
+                grid-template-columns: 1fr 1fr; /* 2 images par ligne sur mobile */
+            }
+            .reviews-list {
+                grid-template-columns: 1fr; /* Affichage en une colonne sur mobile */
+            }
+            .cta-button {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+            .blinking-text {
+                font-size: 1.1em;  /* Réduit la taille du texte sur petits écrans */
+            }
+            .cta-button {
+                bottom: 60px;
+            }
+        }
+
     </style>
 </head>
 <body>
